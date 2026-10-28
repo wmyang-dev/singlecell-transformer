@@ -1,0 +1,32 @@
+{
+  "steps": [
+    {
+      "stage": "raw counts",
+      "cells": 2700,
+      "genes": 32738
+    },
+    {
+      "stage": "cell QC",
+      "cells": 2638,
+      "genes": 32738
+    },
+    {
+      "stage": "gene filter / normalize / log1p",
+      "cells": 2638,
+      "genes": 13656
+    }
+  ],
+  "qc_config": {
+    "n_genes": 128,
+    "seed": 42,
+    "val_fraction": 0.15,
+    "test_fraction": 0.15,
+    "min_genes": 200,
+    "max_genes": 2500,
+    "max_pct_mt": 5.0,
+    "min_train_cells": 3,
+    "target_sum": 10000.0
+  },
+  "seed": 42,
+  "note": "Full-data exploration; not model training inputs."
+}

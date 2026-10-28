@@ -1,0 +1,17 @@
+singlecell-venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.cache/
+data/raw/
+data/processed/
+outputs/**/checkpoints/
+outputs/**/masks.npz
+outputs/smoke/
+.env
+.env.*
+docs/

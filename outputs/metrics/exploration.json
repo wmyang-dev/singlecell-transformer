@@ -1,0 +1,68 @@
+{
+  "source": "scanpy.datasets.pbmc3k() / 10x Genomics PBMC3k",
+  "documentation": "https://scanpy.scverse.org/en/stable/generated/scanpy.datasets.pbmc3k.html",
+  "raw_sha256": "89a96f1beaa2dd83a687666d3f19a4513ac27a2a2d12581fcd77afed7ea653a1",
+  "raw_shape": [
+    2700,
+    32738
+  ],
+  "raw_matrix_type": "csr_matrix",
+  "raw_obs_columns": [],
+  "raw_var_columns": [
+    "gene_ids"
+  ],
+  "qc_config": {
+    "n_genes": 128,
+    "seed": 42,
+    "val_fraction": 0.15,
+    "test_fraction": 0.15,
+    "min_genes": 200,
+    "max_genes": 2500,
+    "max_pct_mt": 5.0,
+    "min_train_cells": 3,
+    "target_sum": 10000.0
+  },
+  "steps": [
+    {
+      "stage": "raw",
+      "cells": 2700,
+      "genes": 32738
+    },
+    {
+      "stage": "cell QC",
+      "cells": 2638,
+      "genes": 32738
+    },
+    {
+      "stage": "exploratory gene filter",
+      "cells": 2638,
+      "genes": 13656
+    }
+  ],
+  "qc_quantiles_before_filter": {
+    "total_counts": {
+      "0.0": 548.0,
+      "0.01": 658.9300000000001,
+      "0.5": 2197.0,
+      "0.99": 5928.619999999985,
+      "1.0": 15844.0
+    },
+    "n_genes_by_counts": {
+      "0.0": 212.0,
+      "0.01": 326.0,
+      "0.5": 817.0,
+      "0.99": 1749.0099999999998,
+      "1.0": 3422.0
+    },
+    "pct_counts_mt": {
+      "0.0": 0.0,
+      "0.01": 0.593839368224144,
+      "0.5": 2.0296391248703003,
+      "0.99": 5.876420469284044,
+      "1.0": 22.569026947021484
+    }
+  },
+  "pca_components": 30,
+  "umap_seed": 42,
+  "note": "Full-data exploration only. Training reloads raw counts and refits features on train cells."
+}

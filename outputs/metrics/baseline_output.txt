@@ -1,0 +1,19 @@
+Epoch 01/5: train MSE=0.0684, val MSE=0.0559
+Epoch 02/5: train MSE=0.0683, val MSE=0.0559
+Epoch 03/5: train MSE=0.0705, val MSE=0.0559
+Epoch 04/5: train MSE=0.0732, val MSE=0.0571
+Epoch 05/5: train MSE=0.0646, val MSE=0.0561
+     split       model  subset    n      mae     rmse
+validation   gene_mean     all 7524 0.064611 0.236187
+validation   gene_mean    zero 7374 0.033566 0.038928
+validation   gene_mean nonzero  150 1.590786 1.650347
+validation transformer     all 7524 0.064611 0.236187
+validation transformer    zero 7374 0.033566 0.038928
+validation transformer nonzero  150 1.590786 1.650347
+      test   gene_mean     all 7524 0.066361 0.250510
+      test   gene_mean    zero 7376 0.033832 0.039179
+      test   gene_mean nonzero  148 1.687506 1.764610
+      test transformer     all 7524 0.066361 0.250510
+      test transformer    zero 7376 0.033832 0.039179
+      test transformer nonzero  148 1.687506 1.764610
+Selected epoch: 0; artifacts: outputs

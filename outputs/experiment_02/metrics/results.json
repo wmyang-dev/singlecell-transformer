@@ -1,0 +1,115 @@
+{
+  "training_config": {
+    "epochs": 100,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "mask_fraction": 0.15,
+    "d_model": 32,
+    "n_heads": 4,
+    "n_layers": 1,
+    "dropout": 0.1,
+    "seed": 42,
+    "device": "cpu",
+    "threads": 4
+  },
+  "model_config": {
+    "n_genes": 128,
+    "d_model": 32,
+    "n_heads": 4,
+    "n_layers": 1,
+    "dropout": 0.1
+  },
+  "best_epoch": 30,
+  "best_validation_mse": 0.0557774193584919,
+  "parameters": 12769,
+  "training_and_evaluation_seconds": 109.58,
+  "checkpoint_reload_identical": true,
+  "mask_seeds": {
+    "validation": 43,
+    "test": 44
+  },
+  "masked_genes_per_cell": 19,
+  "environment": {
+    "python": "3.11.2",
+    "platform": "macOS-26.7.1-arm64-arm-64bit",
+    "torch": "2.14.1",
+    "scanpy": "1.11.5",
+    "anndata": "0.12.19",
+    "numpy": "2.4.6",
+    "scikit-learn": "1.9.1"
+  },
+  "metrics": {
+    "validation": {
+      "gene_mean": {
+        "all": {
+          "n": 7524,
+          "mae": 0.06461103009571238,
+          "rmse": 0.2361871472007598
+        },
+        "zero": {
+          "n": 7374,
+          "mae": 0.03356598247079305,
+          "rmse": 0.03892832771625816
+        },
+        "nonzero": {
+          "n": 150,
+          "mae": 1.5907855713367463,
+          "rmse": 1.6503472778509016
+        }
+      },
+      "transformer": {
+        "all": {
+          "n": 7524,
+          "mae": 0.0650214333030762,
+          "rmse": 0.23617243974244753
+        },
+        "zero": {
+          "n": 7374,
+          "mae": 0.03399570777977923,
+          "rmse": 0.0392792518615624
+        },
+        "nonzero": {
+          "n": 150,
+          "mae": 1.5902461000283559,
+          "rmse": 1.6498328620949265
+        }
+      }
+    },
+    "test": {
+      "gene_mean": {
+        "all": {
+          "n": 7524,
+          "mae": 0.06636076806609978,
+          "rmse": 0.2505101900284455
+        },
+        "zero": {
+          "n": 7376,
+          "mae": 0.033832357827371484,
+          "rmse": 0.03917871202009927
+        },
+        "nonzero": {
+          "n": 148,
+          "mae": 1.6875064026665043,
+          "rmse": 1.7646095650664786
+        }
+      },
+      "transformer": {
+        "all": {
+          "n": 7524,
+          "mae": 0.06677165366829299,
+          "rmse": 0.2505167805476789
+        },
+        "zero": {
+          "n": 7376,
+          "mae": 0.034259521173944076,
+          "rmse": 0.03952269807126848
+        },
+        "nonzero": {
+          "n": 148,
+          "mae": 1.6871060406839526,
+          "rmse": 1.7642747988345797
+        }
+      }
+    }
+  }
+}

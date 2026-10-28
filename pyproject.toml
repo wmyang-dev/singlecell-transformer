@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "singlecell-transformer"
+version = "0.1.0"
+description = "A small, reproducible PBMC3k masked-expression Transformer learning project"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = [
+    "torch>=2.5,<3",
+    "scanpy>=1.11,<2",
+    "matplotlib>=3.8,<4",
+    "scikit-learn>=1.4,<2",
+]
+
+[project.optional-dependencies]
+notebook = ["jupyterlab>=4,<5", "nbclient>=0.10,<1", "ipywidgets>=8,<9"]
+dev = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+include = ["singlecell_baseline*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,43 @@
+{
+  "config": {
+    "n_genes": 128,
+    "seed": 42,
+    "val_fraction": 0.15,
+    "test_fraction": 0.15,
+    "min_genes": 200,
+    "max_genes": 2500,
+    "max_pct_mt": 5.0,
+    "min_train_cells": 3,
+    "target_sum": 10000.0
+  },
+  "steps": [
+    {
+      "stage": "raw counts",
+      "cells": 2700,
+      "genes": 32738
+    },
+    {
+      "stage": "fixed cell QC",
+      "cells": 2638,
+      "genes": 32738
+    },
+    {
+      "stage": "train-only detected gene filter",
+      "cells": 1846,
+      "genes": 12953
+    },
+    {
+      "stage": "train-only HVGs / log1p target",
+      "cells": 2638,
+      "genes": 128
+    }
+  ],
+  "split_sizes": {
+    "train": 1846,
+    "validation": 396,
+    "test": 396
+  },
+  "normalization": "Per-cell full-library total to 10000 (configurable), then log1p; before gene subset.",
+  "feature_selection": "Seurat normalized dispersion fitted only on training cells; stable top-k.",
+  "qc_note": "Preset PBMC tutorial cutoffs; not learned from validation/test; not universal biological rules."
+}
